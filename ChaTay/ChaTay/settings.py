@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
+    'chat.apps.ChatConfig',
     'registration.apps.RegistrationConfig',
     'authentication.apps.AuthenticationConfig',
     'django.contrib.admin',
@@ -70,6 +72,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ChaTay.wsgi.application'
+# Daphne
+ASGI_APPLICATION = "ChaTay.asgi.application"
 
 
 # Database

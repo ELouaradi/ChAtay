@@ -1,0 +1,7 @@
+from django.shortcuts import render
+
+# Create your views here.
+def chat(request):
+    return render(request,"chatStyle/index.html")
+def room(request, room_name):
+    return render(request, "chatStyle/room.html", {"room_name": room_name})
