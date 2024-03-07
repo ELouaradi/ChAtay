@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -164,4 +164,161 @@ button {
     <div class="footer"><span>Sign up</span><span>Forgot Password?</span></div>
   </div>
 </body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyEgtDjW1l4d9I6egiwec6UH8pVXWIlfov"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha384-rbs5jQhF6KO3j8Nnq4ABahVevA3eZc3zq9RRf7CG01gxsAVtR8Pm5XQVj4iXtx3X"
+        crossorigin="anonymous">
+    <style>
+        /* Add your custom styling here */
+        body {
+            background-color: #0f0f0f;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            background: linear-gradient(45deg, #1c1c1c, #303030);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .card-header {
+            background: linear-gradient(45deg, #007bff, #42b883);
+            border-bottom: none;
+            border-radius: 15px 15px 0 0;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border: 2px solid #42b883;
+            border-radius: 12px;
+            padding: 12px;
+            color: #fff;
+            background-color: #1c1c1c;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            background-color: #303030;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #42b883, #007bff);
+            border-radius: 12px;
+            padding: 12px;
+            transition: background 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #007bff, #42b883);
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 12px;
+            transition: background 0.3s ease;
+            color: #fff;
+        }
+
+        .google-btn {
+            background-color: #ea4335;
+        }
+
+        .facebook-btn {
+            background-color: #1877f2;
+        }
+
+        .social-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">Create an Account</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" action="/account/signup" class="needs-validation" novalidate>
+                    <input type="hidden" name="csrfmiddlewaretoken" value="your-csrf-token-here">
+                    <div class="form-group">
+                        <input type="text" name="username" class="form-control" placeholder="Username" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password1" class="form-control" placeholder="Password" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password2" class="form-control" placeholder="Confirm Password"
+                            required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+
+                <!-- Social account registration buttons -->
+                <div class="social-buttons">
+                    <a href="#" class="social-btn google-btn">
+                        <i class="fab fa-google"></i> Register with Google
+                    </a>
+                    <a href="#" class="social-btn facebook-btn">
+                        <i class="fab fa-facebook"></i> Register with Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 text-center">
+            <p>Already have an account? <a href="/account/login" class="text-primary">Login here</a></p>
+        </div>
+    </div>
+</body>
+
 </html>
